@@ -1,11 +1,13 @@
 package ATM;
 
+import javax.swing.JOptionPane;
+
 public class Principal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("hola mundo");
-
+	
+	Plantilla creando_cajero= new Consultar_saldo();
+	creando_cajero.setSaldo(500);
+		
 	}
-
 }
