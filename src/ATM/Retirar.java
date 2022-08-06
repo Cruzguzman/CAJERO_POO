@@ -6,8 +6,20 @@ public class Retirar extends Plantilla{
 
 	@Override
 	public void Transacciones() {
-		JOptionPane.showMessageDialog(null,"Su saldo actual es: " + getSaldo());
+		// TODO Auto-generated method stub
+		
+		Retiros();
+		if(retiro<= getSaldo()) {
+			transacciones=getSaldo();
+			setSaldo(transacciones-retiro);
+			JOptionPane.showMessageDialog(null, "Cargo a tu cuenta: "+ retiro+"\n"+"Saldo actual es: "+getSaldo());
+		}else {
+			JOptionPane.showMessageDialog(null,"Saldo insuficiente. ");
+		}
+	}
+
+	
 		
 	}
 
-}
+

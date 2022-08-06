@@ -25,19 +25,24 @@ public abstract class Plantilla {
 			} while (bandera == 0);
 			
 			switch (opcion) {
-			case 1:
+			case 1: //consultar saldo
+				Plantilla creando_consulta= new Consultar_saldo();
+				creando_consulta.Transacciones();
 
 				break;
 				
-			case 2:
+			case 2: //retirar
+				Plantilla creando_retiro= new Retirar();
+				creando_retiro.Transacciones();
 				
 				break;
 				
-			case 3:
-				
+			case 3://depositos
+				Plantilla creando_deposito= new Depositos();
+				creando_deposito.Transacciones();
 				break;
 				
-			case 4:
+			case 4://salir
 				JOptionPane.showMessageDialog(null, "Vuelva pronto");
 				bandera=2;
 				break;
@@ -48,11 +53,11 @@ public abstract class Plantilla {
 	}
 
 	public void Retiros() {
-		retiro = Integer.parseInt(JOptionPane.showInputDialog("¿Cuanto desea retirar?: "));
+		retiro = Integer.parseInt(JOptionPane.showInputDialog(null,"¿Cuanto desea retirar?: "));
 	}
 	
 	public void Depositos() {
-		deposito = Integer.parseInt(JOptionPane.showInputDialog("Cuanto desea depositar"));
+		deposito = Integer.parseInt(JOptionPane.showInputDialog(null,"Cuanto desea depositar"));
 	}
 	
 	public abstract void Transacciones();
